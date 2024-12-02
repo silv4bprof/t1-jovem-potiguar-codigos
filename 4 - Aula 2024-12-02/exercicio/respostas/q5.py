@@ -1,5 +1,5 @@
 turma = [
-    ["João", "Maria", "José"] ,
+    ["João", "Maria", "José"],
     [20, 22, 21]
 ]
 
