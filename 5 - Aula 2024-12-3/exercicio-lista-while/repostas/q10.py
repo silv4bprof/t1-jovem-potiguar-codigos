@@ -2,14 +2,13 @@ nomes = []
 
 while True:
     nome = input("Digite um nome: ")
-    if nome.lower() == 'sair':
-        print("Saindo ...")
+    if nome == 'sair':
         break
-    else:
-        nomes.append(nome)
+    nomes.append(nome)
 
-contador = 0
-print('Exibindo os nomes cadastrados:\n')
-while contador < len(nomes):
-    print(nomes[contador])
-    contador += 1
+nomes.sort()  # default: a -> z
+posicao = 0
+
+while posicao < len(nomes):
+    print(nomes[posicao])
+    posicao += 1

@@ -1,8 +1,11 @@
-frutas = ['maçã', 'banana', 'laranja', 'uva']
-tam_frutas = len(frutas)
-contador = 0
+frutas = ['maçã', 'banana', 'laranja', 'uva', 'abacaxi']
 
-while contador < tam_frutas:
-    print(f"Removendo {frutas[0]} da lista.")
+tamanho = len(frutas)
+posicao = 0
+
+print(f"Lista base: {frutas}")
+while posicao < tamanho:
+    print(f"Removendo {frutas[0]}")
     frutas.pop(0)
-    contador += 1
+    print(f"Lista atualizada: {frutas}")
+    posicao += 1  # contador = contador + 1

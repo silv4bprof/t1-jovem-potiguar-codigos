@@ -1,9 +1,12 @@
-palavras = ['barraco', 'treta', 'confusão', 'briga']
+palavras = ['treta', 'confusão', 'tiro', 'porrada', 'bomba']
+tamanho = len(palavras)
+posicao = 0
+qtd_palavras_maior_cinco = 0
 
-contador = 0
+while posicao < tamanho:
+    if len(palavras[posicao]) > 5:
+        # qtd_palavras_maior_cinco = qtd_palavras_maior_cinco + 1
+        qtd_palavras_maior_cinco += 1
+    posicao = posicao + 1
 
-while contador < len(palavras):
-    palavra = palavras[contador]
-    if len(palavra) > 5:
-        print(f"{palavra} tem mais de 5 letras".capitalize())
-    contador += 1
+print(f"{qtd_palavras_maior_cinco} palavras tem mais de 5 letras.")

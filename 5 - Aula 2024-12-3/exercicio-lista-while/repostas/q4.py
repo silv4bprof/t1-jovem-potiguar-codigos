@@ -1,15 +1,10 @@
 pares = []
+numero_vez = 0
 
-contador = 0
-ate = 20
+while numero_vez <= 20:
+    resto = numero_vez % 2
+    if resto == 0:
+        pares.append(numero_vez)
+    numero_vez = numero_vez + 1
 
-while contador < ate+1:
-    if contador % 2 == 0:
-        pares.append(contador)
-    contador += 1
-
-print('valores da lista'.capitalize())
-contador = 0
-while contador < len(pares):
-    print(pares[contador])
-    contador += 1
+print(pares)

@@ -1,16 +1,17 @@
-numeros = list(range(1, 11))
-numeros_multiplicados = []
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+dobrados = []
 
-contador = 0
-while contador < len(numeros):
-    multiplicacao = 2 * numeros[contador]
-    numeros_multiplicados.append(multiplicacao)
-    contador += 1
+tamanho_lista = len(numeros)
+posicao = 0
 
-contador = 0
-while contador < len(numeros):
-    print(numeros_multiplicados[contador])
-    contador += 1
+while posicao < tamanho_lista:
+    multiplicacao = 2 * numeros[posicao]
+    dobrados.append(multiplicacao)
+    posicao = posicao + 1
 
-print(numeros)
-print(numeros_multiplicados)
+
+posicao = 0
+tamanho_lista = len(dobrados)
+while posicao < tamanho_lista:
+    print(f"Valor: {dobrados[posicao]}")
+    posicao += 1

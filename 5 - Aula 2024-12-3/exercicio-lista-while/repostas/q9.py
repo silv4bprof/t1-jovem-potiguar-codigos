@@ -1,11 +1,14 @@
-temperaturas = [30, 25, 28, 35, 22, 27]
+temperaturas = [30, 25, 28, 35, 22, 27, 100]
 
-qtd_temperaturas = len(temperaturas)
-soma, contador = 0, 0
+posicao = 0
+soma = 0
 
-while contador < qtd_temperaturas:
-    soma += temperaturas[contador]
-    contador += 1
+print(f"Lista: {temperaturas}")
+while posicao < len(temperaturas):
+    soma = soma + temperaturas[posicao]
+    posicao += 1
 
-media = soma/qtd_temperaturas
-print(f"Média das temperatudas: {media}")
+print(f"Soma das temperaturas: {soma}")
+
+media = soma / len(temperaturas)
+print(f"Média das temperaturas: {media:.2f}")

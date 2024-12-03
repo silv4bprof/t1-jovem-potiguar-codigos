@@ -1,17 +1,22 @@
 numeros = []
-
+# preenche a lista
 while True:
-    numero = int(input("Digite um número para inserir: "))
-    if numero != 0:
-        numeros.append(numero)
-    else:
-        print("Encerrando ...")
+    numero = int(input("Digite um número (0 para sair): "))
+    if numero == 0:
         break
+    numeros.append(numero)
 
-contador = 0
+print(numeros)
+# somatório
+posicao = 0
 soma = 0
-while contador < len(numeros):
-    soma = soma + numeros[contador]
-    contador += 1
+while posicao < len(numeros):
+    soma = soma + numeros[posicao]
+    posicao = posicao + 1
+print(soma)
 
-print(f"Soma dos números digitados: {soma}")
+# percorrendo a lista
+posicao = 0
+while posicao < len(numeros):
+    print(f"Valor: {numeros[posicao]}")
+    posicao = posicao + 1
