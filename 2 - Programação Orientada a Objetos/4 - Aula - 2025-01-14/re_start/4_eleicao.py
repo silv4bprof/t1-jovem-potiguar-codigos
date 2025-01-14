@@ -1,3 +1,8 @@
+"""
+    Urna Eletrônica Orientada a Objetos
+"""
+
+
 # Classe PAI/MÃE
 class Pessoa:
     def __init__(self, nome: str, cpf: str):
@@ -47,7 +52,7 @@ class Eleitor(Pessoa):
 
     # sobreposição de método
     def __str__(self):
-        return self.get_nome()
+        return f"__str__: {self.get_nome()}"
 
 
 class Partido:
@@ -72,13 +77,14 @@ class Partido:
         return f"{self.__numero} - {self.__nome} - {self.__cnpj}"
 
 
-class Candidato(Pessoa):
+class Candidato(Pessoa):  # político
     def __init__(self, nome: str, cpf: str, partido: Partido, numero: int):
         super().__init__(nome, cpf)
         self.__partido = partido
         self.__numero = numero
 
     def get_partido(self) -> Partido:
+        # retorna a classe Partido de Candidato
         return self.__partido
 
     def se_apresente(self):
@@ -101,6 +107,9 @@ class Voto:
     def get_candidato(self) -> Candidato:
         return self.__candidato
 
+    def __str__(self):
+        return f"{self.get_eleitor().get_nome()} votou em {self.get_candidato().get_nome()}"
+
 
 class Urna:
     def __init__(self):
@@ -111,15 +120,19 @@ class Urna:
 
     def exibe_votos(self):
         if self.__votos_computados:
-            for index, voto in enumerate(self.__votos_computados, start=1):
-                print(f"Voto {index}: ", end="")
-                print(voto.get_dados())
+            # for index, voto in enumerate(self.__votos_computados, start=1):
+            #     print(f"Voto {index}: ", end="")
+            #     print(voto.get_dados())
+
+            for voto in self.__votos_computados:
+                print(voto)
         else:
             print("Urna vazia!")
 
 
 if __name__ == "__main__":
     print("\nPartido(s)")
+    # criando uma instância
     pt = Partido("Partido dos Trabalhadores", 13)
     pl = Partido("Partido Liberal", 22)
     pt.set_cnpj("15.555.123/0001-13")

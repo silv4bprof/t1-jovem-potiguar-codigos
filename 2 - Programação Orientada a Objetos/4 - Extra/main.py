@@ -9,6 +9,7 @@ urna = UrnaEletronica()
 
 while True:
     print("Bem-vindo à Urna Eletrônica")
+
     nome = input("Digite o seu nome: ")
     titulo_eleitor = input("Digite o numero do titulo de eleitor: ")
     print("\nCandidados Disponíveis P/ Votação")
