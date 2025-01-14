@@ -41,7 +41,10 @@ class Eleitor(Pessoa):
         self.__titulo = titulo_eleitor
 
     def se_apresente(self):
-        print(f"Nome: {self.get_nome()}\nTítulo: {self.get_titulo()}")
+        print("\nDados do Eleitor:\n")
+        print(f"Nome: {self.get_nome()}")
+        print(f"CPF: {self.get_cpf()}")
+        print(f"Título: {self.get_titulo()}")
 
     # Getters & Setters
     def get_titulo(self) -> str:
@@ -91,6 +94,9 @@ class Candidato(Pessoa):  # político
         # retorna a classe Partido de Candidato
         return self.__partido
 
+    def get_numero(self):
+        return self.__numero
+
     def se_apresente(self):
         print(f"{self.get_nome()}")
         print(f"{self.__partido.get_nome()} - {self.__partido.get_numero()}")
@@ -128,6 +134,12 @@ class Pleito:
     def exibir_candidatos(self):
         for candidato in self.__candidatos:
             print(candidato)
+
+    def retorna_candidato(self, numero: int) -> Candidato | None:
+        for candidato in self.__candidatos:
+            if candidato.get_numero() == numero:
+                return candidato
+        return None
 
 
 class Urna:

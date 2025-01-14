@@ -9,8 +9,8 @@ from classes import Urna
 if __name__ == "__main__":
     print("\nPartido(s)")
     # criando uma instância
-    pt = Partido("Partido dos Trabalhadores", 13)
-    pl = Partido("Partido Liberal", 22)
+    pt = Partido("Partido dos Trabalhadores", "PT", 13)
+    pl = Partido("Partido Liberal", "PL", 22)
     pt.set_cnpj("15.555.123/0001-13")
     pl.set_cnpj("52.854.789/0001-22")
 
@@ -26,14 +26,14 @@ if __name__ == "__main__":
     urna = Urna()
 
     # adicionar um voto
-    voto1 = Voto(eleitor1, candidato2)
-    voto2 = Voto(eleitor2, candidato1)
-    voto3 = Voto(eleitor2, candidato1)
-    voto4 = Voto(eleitor2, candidato1)
+    # voto1 = Voto(eleitor1, candidato2)
+    # voto2 = Voto(eleitor2, candidato1)
+    # voto3 = Voto(eleitor2, candidato1)
+    # voto4 = Voto(eleitor2, candidato1)
 
-    urna.adicionar_voto(voto1)
-    urna.adicionar_voto(voto2)
-    urna.adicionar_voto(voto3)
-    urna.adicionar_voto(voto4)
+    # urna.adicionar_voto(voto1)
+    # urna.adicionar_voto(voto2)
+    # urna.adicionar_voto(voto3)
+    # urna.adicionar_voto(voto4)
 
     urna.exibe_votos()
