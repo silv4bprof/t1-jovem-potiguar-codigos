@@ -1,11 +1,11 @@
 # from classes import Eleitor, Partido [...] Urna
 
-from classes import Eleitor
-from classes import Partido
-from classes import Candidato
-from classes import Voto
-from classes import Urna
-from classes import Pleito
+from classes.Eleitor import Eleitor
+from classes.Partido import Partido
+from classes.Candidato import Candidato
+from classes.Voto import Voto
+from classes.Urna import Urna
+from classes.Pleito import Pleito
 
 
 def menu() -> int:
@@ -64,7 +64,7 @@ if __name__ == "__main__":
         elif opcao == 2:
             # criação/identificação do eleitor (class)
             print("\nCom os Mesários")
-            
+
             nome = input("Nome do Eleitor: ")
             cpf = input("CPF do Eleitor: ")
             titulo = int(input("Título do Eleitor: "))
