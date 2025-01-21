@@ -1,7 +1,9 @@
 from abc import ABC, abstractmethod
 
+
+# receita de funcionário
 class Funcionario(ABC):
-    def __init__(self, nome):
+    def __init__(self, nome: str):
         self.nome = nome
 
     @abstractmethod
@@ -10,7 +12,7 @@ class Funcionario(ABC):
 
 
 class Gerente(Funcionario):
-    def __init__(self, nome, salario_fixo):
+    def __init__(self, nome: str, salario_fixo: float):
         super().__init__(nome)
         self.salario_fixo = salario_fixo
 
